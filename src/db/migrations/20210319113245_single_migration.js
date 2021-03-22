@@ -9,9 +9,10 @@ exports.up = (knex) =>
     t.integer('age');
     t.integer('experience');
     t.decimal('yearly_income');
-    t.boolean('has_childre');
+    t.boolean('has_children');
     t.string('license_states');
     t.date('expiration_date');
+    t.string('license_number');
     t.integer('duplicate_with');
     t.unique(['email', 'phone']);
     t.timestamp('created_at').notNullable().defaultTo(knex.raw('now()'));
